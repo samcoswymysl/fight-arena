@@ -1,12 +1,24 @@
 {
-  "root": true,
   "parser": "@typescript-eslint/parser",
-  "plugins": [
-    "@typescript-eslint"
+   "parserOptions": {
+     "project": "./tsconfig.json"
+},
+  "plugins": ["@typescript-eslint"],
+  "extends":[
+    "airbnb",
+    "airbnb-typescript",
+    "airbnb/hooks",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking"
   ],
-  "extends": [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended"
-  ]
+  "rules": {
+    "import/prefer-default-export": "off",
+    "@typescript-eslint/lines-between-class-members": "off",
+    "@typescript-eslint/no-misused-promises": "off"
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es2021": true
+  }
 }
