@@ -73,7 +73,7 @@ export class WarriorRecord {
     const [[results]] = await pool.execute('SELECT * FROM `warriors` WHERE  `id` = :id', {
       id,
     }) as WarriorRecordResult;
-    return results ? null : new WarriorRecord(results);
+    return !results ? null : new WarriorRecord(results);
   }
 
   static async getOneByName(name: string): Promise<boolean> {

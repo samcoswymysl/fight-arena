@@ -1,8 +1,21 @@
 <h2>Komnata chwały</h2>
-<tabele>
-    <tr>
-        <td>
 
-        </td>
-    </tr>
-</tabele>
+<table>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Ilość zwycięstw</th>
+            <th>Imię</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each warriors}}
+            <tr>
+                <th>{{this.place}}</th>
+                <td>{{this.wins}}</td>
+                <td>{{this.name}}</td>
+            </tr>
+
+        {{/each}}
+    </tbody>
+</table>

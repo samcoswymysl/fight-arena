@@ -1,3 +1,7 @@
 <h2>Wyierz wojowników do walki</h2>
 
-<form action=""></form>
+<form action="/arena" method="post">
+{{> warrior-select select-name="warrior1"}}
+{{> warrior-select  select-name="warrior2"}}
+    <input type="submit" value="Rozpocznij Walkę">
+</form>
